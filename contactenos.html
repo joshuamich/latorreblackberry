@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>La Torre</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <link type="text/css" rel="stylesheet" href="styles.css" />
+    </head>
+    <body>
+        <table id="container">
+            <tr>
+                <td id="logoC">
+                    <a x-blackberry-focusable="true" onmouseover="highlight(this);" onmouseout="unhighlight(this);" onclick="showHome();" id="logo">
+                        <img src="images/latorrelogo.png"/>
+                    </a>
+                </td>
+            </tr>
+            <tr>
+                <td id="containerContactenos">
+                    <form id="formcontactenos">
+                        <input type="text" name="nombre" value="Nombre" id="nombreform" class="caja"/>
+                        <input type="text" name="email" value="E-mail" id="emailform"  class="caja"/>
+                        <textarea class="caja" id="mensajeform">Agregar Mensaje</textarea>
+                        <input type="submit" id="submitbutton" value="Enviar"/>
+                    </form>
+                    <div id="direccionContactenos">Te atendemos en un horario de 8:00 a 21:00 hrs, los 365 días del año. Consulta en Información de esta pagina nuestras ubicaciones. Servicio al cliente: sercliente@unisuper.com.gt Tel. 23765333</div>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <ul id="menuprincipal">
+                        <li><a x-blackberry-focusable="true" onmouseover="highlight(this);" onmouseout="unhighlight(this);" onclick="showHome();"><img src="images/milista.png" /></a></li>
+                        <li><a x-blackberry-focusable="true" onmouseover="highlight(this);" onmouseout="unhighlight(this);" onclick="showPromociones();"><img src="images/promociones.png" /></a></li>
+                        <li><a x-blackberry-focusable="true" onmouseover="highlight(this);" onmouseout="unhighlight(this);" onclick="showTiendas();"><img src="images/tiendas.png" /></a></li>
+                        <li><a x-blackberry-focusable="true" onmouseover="highlight(this);" onmouseout="unhighlight(this);" onclick="showCalculadora();"><img src="images/calculadora.png" /></a></li>
+                        <li><a x-blackberry-focusable="true" onmouseover="highlight(this);" onmouseout="unhighlight(this);" onclick="showContactenos();"><img src="images/contactenos.png" /></a></li>
+                        <li><a x-blackberry-focusable="true" onmouseover="highlight(this);" onmouseout="unhighlight(this);" onclick="showLogin();"><img src="images/login_registro.png" /></a></li>
+                    </ul>
+                </td>
+            </tr>
+        </table>
+        <script src="js/jquery.js" type="text/javascript"></script>
+        <script src="js/actions.js" type="text/javascript"></script>
+        <script src="js/contactenos.js" type="text/javascript"></script>
+    </body>
+</html>

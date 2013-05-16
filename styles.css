@@ -1,0 +1,549 @@
+/* 
+    Document   : styles
+    Created on : Mar 12, 2013, 11:10:43 AM
+    Author     : MAS2
+    Description:
+        Purpose of the stylesheet follows.
+*/
+body {
+    margin: 0;
+    padding: 0;
+    background: #550e71;
+    font-family: 'Arial';
+}
+
+a:hover {
+    cursor: pointer;
+}
+
+input[type="submit"] {
+    cursor: pointer;
+}
+
+td,
+tr,
+table {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    border-spacing: 0;
+}
+
+td  {
+    vertical-align: top;
+}
+
+#container {
+    width: 100%;
+}
+
+#logoC {
+    width: 100%;
+    height: 48px;
+    background: url('images/bgheader.jpg') repeat-x; 
+}
+
+a#logo {
+    display: block;
+    border: 2px solid transparent;
+    height: 44px;
+    text-align: center;
+}
+
+#bannerC img{
+    float: left;
+}
+
+#crear_nueva_lista {
+    display: block;
+    text-align: center;
+    margin-top: 1%;
+}
+
+#crear_nueva_lista img {
+    border: 2px solid transparent;
+    border-radius: 10px;
+}
+
+ul#listas_creadas {
+    list-style: none;
+    margin: 0 0 7px 0;
+    padding: 0;
+}
+
+ul#listas_creadas li {
+    position: relative;
+    display: block;
+    height: 59px;
+    margin-bottom: 1%;
+}
+
+ul#listas_creadas li a {
+    position: absolute;
+    display: block;
+    z-index: 2;
+    text-align: center;
+}
+
+ul#listas_creadas li a.verlista {
+    z-index: 0;
+    width: 97%;
+    height: 100%;
+    margin: 0 1.1%;
+    border-radius: 5px;
+    background: url('images/bgitemlista.png') no-repeat;
+    background-size: 100%;
+}
+
+ul#listas_creadas li a.borrarlista {
+    left: 62%;
+    top: 14%;
+    width: 16.5%;
+}
+
+ul#listas_creadas li a.limpiarlista {
+    left: 44%;
+    top: 14%;
+    width: 16.6%;
+}
+
+ul#listas_creadas li a img {
+    border-radius: 7px;
+    border: 2px solid transparent;
+}
+
+ul#menuprincipal {
+    list-style: none;
+    margin: 0;
+    padding: 0 0 0 0.3%;
+    background: #fcfdfd;
+    text-align: center;
+}
+
+ul#menuprincipal li {
+    display: inline-block;
+    width: 15%;
+}
+
+ul#menuprincipal li a {
+    display: block;
+    float: left;
+    border: 2px solid transparent;
+    border-radius: 10px;
+    height: 90%;
+    margin-top: 10%;
+    text-align: center;
+}
+
+ul#menuprincipal li a img {
+    float: left;
+    height: 80%;        
+}
+
+span.nombre_lista {
+    position: absolute;
+    display: block;
+    width: 35%;
+    height: 40%;
+    top: 15%;
+    left: 4%;
+    z-index: 2;
+}
+
+span.numero_productos {
+    position: absolute;
+    display: block;
+    width: 35%;
+    height: 40%;
+    top: 55%;
+    left: 4%;
+    z-index: 2;
+}
+
+#promocionesC {
+    background: #e5e7eb;
+}
+
+ul#listado_promociones {
+    list-style: none;
+    margin: 3%;
+    padding: 0;
+}
+
+ul#listado_promociones li {
+    margin-bottom: 7px;
+    overflow: hidden;
+    position: relative;
+}
+
+ul#listado_promociones li img{
+    float: left;
+    height: 100%;
+    margin-right: 6px;
+}
+
+div.titulo_promocion {
+    color: #5c2e91;
+    font-weight: bold;
+    font-size: small;
+}
+
+div.descripcion {
+    font-size: 12px;
+}
+
+div.articulos_desde {
+    position: absolute;
+    text-align: right;
+    color: #5c2e91;
+    bottom: 0;
+    right: 0;
+}
+
+div.articulos_desde span {
+    font-size: xx-large;
+}
+
+form#calculadora {
+    width: 100%;
+    background: #e5e7eb;
+    overflow: hidden;
+}
+
+form#calculadora input[type="text"]{
+    width: 98%;
+    height: 25%;
+    margin: 1% 0;
+    padding: 0 2% 0 0;
+    border: none;
+    text-align: right;
+    font-size: x-large;
+    background: url("images/bg_result_calculadora.png") no-repeat center;
+    background-size: 100%;
+}
+
+form#calculadora button { 
+    float: left;
+    width: 15.96%;
+    padding: 0;
+    margin: 0 0.7% 1% 0;  
+    text-align: center;
+    font-size: x-large;
+    border: 2px solid transparent;
+    border-radius: 10px;
+    background: url('images/bg_button_calculadora.png') no-repeat;
+    background-size: 100%;
+    height: 21.45%;
+}
+
+button#igual {
+    width: 32.6% !important;
+    background: url('images/bg_button_igual.png') no-repeat !important;
+    background-size: 100%;
+}
+
+button#borrar {
+    background: url('images/bg_borrar_calculadora.png') no-repeat !important;
+    background-size: 100%;
+}
+
+td#containerContactenos {
+    background: #e5e7eb;
+}
+
+form#formcontactenos {
+    width: 90%;
+    margin: 2% 5% 0.5% 5%;
+}
+
+form#formcontactenos input[type="text"] {
+    width: 98%;
+    padding: 0 1%;
+    border: none;
+    margin: 5px 0 0 0;
+    outline: none;
+    background: url('images/bginputcontacto.png') no-repeat center;
+    background-size: 100%;
+    font-size: small;
+    color: #a7a7a7;
+}
+
+form#formcontactenos textarea { 
+    width: 98%;
+    padding: 1%;
+    border: 0;
+    margin: 4px 0 0 0;
+    background: url('images/bgtextareacontacto.png') no-repeat top center;
+    background-size: 100%;
+    font-size: small;
+    outline: none;
+    color: #a7a7a7;
+}
+
+form#formcontactenos input[type="submit"]{
+    border: none;
+    width: 100%;
+    display: block;
+    background: url('images/submitbg.png') top center no-repeat;
+    background-size: 100%;
+    font-size: small;
+    color: #ffffff;
+}
+
+div#direccionContactenos {
+    width: 90%;
+    margin: 0 5% 5% 5%;
+    line-height: 1em;
+    color: #6b6b6b;
+    text-align: justify;
+    font-size: small;
+}
+
+td#loginContainer {
+    background: #e5e7eb;
+}
+
+form#formlogin {
+    width: 90%;
+    margin: 3% 5% 0% 5%;
+    overflow: hidden;
+}
+
+form#formlogin  input#passwordLogin,
+form#formlogin  input#emailLogin {
+    border: 2px solid #cdcdcd;
+    padding: 0 4px;
+    margin: 5px 0 0 0;
+    outline: none;
+    font-size: small;
+    color: #a7a7a7;
+    border-radius: 8px;
+}
+
+input#emailform {
+    border: none;
+}
+
+input{
+    outline: none;
+}
+
+div#textLogin {
+    text-align: center;
+    color: #414141;
+}
+
+a#registrarseLogin,
+input#submitLogin {
+    display: block;
+    border: 2px solid transparent;
+    padding: 0;
+    width: 30%;
+    margin: 2% 0 1% 18%;
+    float: left;
+    background: #e07610;
+    background-size: 100%;
+    color: #ffffff;
+    font-size: medium;
+    border-radius: 6px;
+}
+
+a#registrarseLogin {
+    margin: 2% 0 1% 4%;
+    text-align: center;
+    text-decoration: none;
+}
+
+img#facebookboton {
+    margin: 3% 0 7% 0;
+    border-radius: 8px;
+    border: 2px solid transparent;
+}
+
+form#buscadorMapa {
+    width: 90%;
+    margin: 0 5%;
+    background: url('images/bgbuscador.png') no-repeat top center;
+    background-size: 100%;
+    overflow: hidden;
+}
+
+form#buscadorMapa input{
+    display: block;
+    float: left;
+    padding: 0;
+    border: none;
+    margin: 0;
+    height: 80%;
+    width: 88%;
+    padding: 0 0 0 2%;
+    margin: 1% 0;
+    background: none;
+    font-size: small;
+}
+
+
+form#buscadorMapa input[type="submit"] {
+    width: 10%;
+    background: url('images/bgbotonbuscador.png') no-repeat center;
+    background-size: 77%;
+}
+
+div#mapa {
+}
+
+td#nuevalistaC {
+    background: #fbf9f7;
+}
+
+div#sinelementos {
+    min-height: 150px;
+    margin: 10px 0;
+}
+
+div#sinelementos p {
+    text-align: center;
+    font-size: large;
+    font-weight: bold;
+    margin: 0;
+}
+
+div#crearMenuLista {
+    position: relative;
+    width: 100%;
+    background: url('images/bgmenuCrearLista.png') no-repeat;
+}
+
+div#crearMenuLista img {
+    position: absolute;
+    border: 2px solid transparent;
+}
+
+img#agregarItem {
+    left: 10%;
+    top: 5%;
+    border-radius: 5px;
+}
+
+img#vertodos {
+    left: 41%;
+    top: 25%;
+    border-radius: 10px;
+}
+
+img#verpendientes {
+    left: 70%;
+    top: 25%;
+    border-radius: 10px;
+}
+
+form#crearListaForm {
+    width: 90%;
+    border: 0;
+    margin: 3% 5%;
+    padding: 0;
+}
+
+form#crearListaForm input[type="text"],
+form#crearListaForm input[type="submit"]{
+    display: block;
+    border: 2px solid #cdcdcd;
+    border-radius: 8px;
+    padding: 0 5px;
+    margin: 0;
+    color: #afafaf;
+    font-size: small;
+}
+
+form#crearListaForm input[type="submit"] {
+    background: #9a9999;
+    margin: 4px 0 0 0 !important;
+    background: -webkit-linear-gradient(#c0c0c0 100%, #9a9999);
+    background: -moz-linear-gradient(#c0c0c0 100%, #9a9999);
+    background: -o-linear-gradient(#c0c0c0 100%, #9a9999);
+    background: linear-gradient(#c0c0c0 100%, #9a9999);
+    color: #000000;
+}
+
+td#crearListaC {
+    background: #eaecf0;
+}
+
+td#nombreLista {
+    
+}
+
+td#nombreLista h1{
+    margin: 1%;
+    font-size: small;
+    color: #ffffff;
+    text-align: center;
+}
+
+form#buscadorproductosForm {
+    width: 92%;
+    margin: 1% 4% 2% 4%;
+    padding: 0;
+}
+
+form#buscadorproductosForm input {
+    float: left;
+    height: 100%;
+    background: #fbf9f7;
+}
+
+form#buscadorproductosForm input[type="text"]{
+    border: 2px solid #cdcdcd;
+    padding: 0 5px;
+    margin: 0;
+    border-top-left-radius: 9px;
+    border-bottom-left-radius: 9px;
+    font-size: small;
+    color: #464646;
+}
+
+form#buscadorproductosForm input[type="submit"]{
+    padding: 0;
+    border: 2px solid #cdcdcd;
+    margin: 0;
+    border-top-right-radius: 9px;
+    border-bottom-right-radius: 9px;
+    background: url('images/searchsubmitbutton.png') no-repeat center #fbf9f7;
+    background-size: 80%;
+}
+
+td#agregarMiListaC h2 {
+    font-size: small;
+    color: #ffffff;
+    padding: 2%;
+    margin: 0;
+    background: #e0e0e0;
+}
+
+td#agregarMiListaC ul {
+    background: #fbf9f7;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+td#agregarMiListaC ul li {
+    border-bottom: 1px solid #dfdddc;
+    background: url('images/bgflechitapasillo.png') no-repeat;
+    background-position: 97% 50%;
+}
+
+td#agregarMiListaC ul li  a {
+    padding: 2.5%;
+    display: block;
+    height: 100%;
+    color: #000000;
+    text-decoration: none;
+    border: 2px solid transparent;
+}
+
+td.milistallena ul li a {
+    background: url("images/selectbg.png") no-repeat;
+    background-position: 10% 50%;
+    padding: 2.5% 5%;
+}
