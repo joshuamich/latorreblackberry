@@ -51,7 +51,7 @@
 			if(mynamespace.db){
 					mynamespace.db.readTransaction(
 						function (t) {
-							t.executeSql('SELECT productos.*,pasillos.nombre pasillo FROM productos,pasillos WHERE productos.id = '+productos_id+' AND productos.pasillos_id=pasillos.id ORDER BY nombre ASC', [], 
+							t.executeSql('SELECT productos.*,pasillos.nombre pasillo,productos_listas.cantidad FROM productos,pasillos,productos_listas  WHERE productos_listas.productos_id = productos.id AND productos_listas.id='+productos_listas_id+'  AND productos.pasillos_id=pasillos.id ORDER BY nombre ASC', [], 
 								function (tx, results) {
 								var lista_html="";
 								for (var i = results.rows.length; i--;) {
@@ -59,6 +59,7 @@
 											document.getElementById('nombreform').value = results.rows.item(i).nombre;
 											document.getElementById('descripcion').value = results.rows.item(i).descripcion;
 											document.getElementById('pasilloform').value = results.rows.item(i).pasillo;
+											document.getElementById('cantidad_productos').value = results.rows.item(i).cantidad;
 								}
 								
 								}
@@ -89,20 +90,20 @@
 				if(mynamespace.db){
 						mynamespace.db.transaction(
 							function (t) {
-								var i;
-								var insert_query	=	"INSERT INTO productos_listas (id, listas_id, productos_id, descripcion, cantidad, estado, updated) VALUES (null,'"+listas_id+"','"+productos_id+"','"+document.getElementById('descripcion').value +"','"+ document.getElementById('cantidad_productos').value+"',0,datetime('now'));";
-								log(insert_query);
+								var i;					//(id, listas_id, productos_id, descripcion, cantidad, estado, updated) VALUES (null,
+								var update_query	=	"UPDATE  productos_listas SET descripcion='"+document.getElementById('descripcion').value +"', cantidad='"+ document.getElementById('cantidad_productos').value+"' 	WHERE id="+productos_listas_id;
+								log(update_query);
 								t.executeSql(
-									insert_query, 
+									update_query, 
 									[], function(tx,r){
 											$('body').load('lista.html');
 									}, function(tx,e){
-											alert(e.message)
+											alert(e.message);
+											
 									}
 								);
 								
-								var myfileurl = "lista.html";
-							    $('body').load(myfileurl, function() {});
+								
 							}
 						);
 				}
@@ -113,7 +114,7 @@
 	
 	function init(){
 			blackberry.system.event.onHardwareKey(blackberry.system.event.KEY_BACK,function() {   
-						var myfileurl="productos.html";	
+						var myfileurl="lista.html";	
 						$('body').load(myfileurl, function() {
 						});
 			});
@@ -151,6 +152,7 @@
 	var altoTextArea	= anchopantalla * 0.9 * 0.235 + "px";
 	var productos_id	= $('body').attr('productos_id');
 	var listas_id		= $('body').attr('listas_id');
+	var productos_listas_id = $('body').attr('productos_listas_id');
 	var cantidad 		= document.getElementById('cantidad_productos');
 	inputNombre.style.height	= altodeInput;
 	inputEmail.style.height		= altodeInput;

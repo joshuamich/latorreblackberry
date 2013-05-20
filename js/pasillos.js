@@ -38,25 +38,25 @@
 	
 	//FUNCIONES GENERALES			----------------------------------------------------------------------
 	function displayPasillos(){
-		try{
-		mynamespace.db = window.openDatabase('DB_latorre_v1', '', 'DBLaTorrev1', 20 * 1024 * 1024, errorOnDB);
-		if(mynamespace.db){
-				mynamespace.db.readTransaction(
-					function (t) {
-						t.executeSql('SELECT * FROM pasillos ORDER BY nombre ASC', [], 
-							function (tx, results) {
-							var lista_html="";
-							for (var i = results.rows.length; i--;) {
-										lista_html += '<li><a href="#" x-blackberry-focusable="true" onmouseover="highlight(this);" onmouseout="unhighlight(this);" onclick="showProductos('+results.rows.item(i).id+');">'+results.rows.item(i).nombre+'</a></li>';
-										
-							}
-							document.getElementById('listado_pasillos').innerHTML = lista_html;
-							}
-						);
-					}
-				);
-		}
-		}catch(err){	log(err.message );	}
+			try{
+			mynamespace.db = window.openDatabase('DB_latorre_v1', '', 'DBLaTorrev1', 20 * 1024 * 1024, errorOnDB);
+			if(mynamespace.db){
+					mynamespace.db.readTransaction(
+						function (t) {
+							t.executeSql('SELECT * FROM pasillos ORDER BY nombre ASC', [], 
+								function (tx, results) {
+								var lista_html="";
+								for (var i = results.rows.length; i--;) {
+											lista_html += '<li><a href="#" x-blackberry-focusable="true" onmouseover="highlight(this);" onmouseout="unhighlight(this);" onclick="showProductos('+results.rows.item(i).id+');">'+results.rows.item(i).nombre+'</a></li>';
+											
+								}
+								document.getElementById('listado_pasillos').innerHTML = lista_html;
+								}
+							);
+						}
+					);
+			}
+			}catch(err){	log(err.message );	}
 	}		
 	
 	function errorOnDB(){
@@ -64,12 +64,25 @@
 	}
 	
 	function showProductos(id){
-		$('body').attr('pasillos_id',id);
-		var myfileurl = "productos.html";
-		$('body').load(myfileurl, function() {});
+			$('body').attr('pasillos_id',id);
+			var myfileurl = "productos.html";
+			$('body').load(myfileurl, function() {});
+	}
+	
+	function init(){
+			blackberry.system.event.onHardwareKey(blackberry.system.event.KEY_BACK,function() {   
+						var myfileurl="internaLista.html";	
+						$('body').load(myfileurl, function() {
+						});
+				});
+			displayPasillos();
 	}
 	
 	function log(message){	/*	alert('CONSOLE.LOG: ' + message);*/	if(typeof console == "object"){		console.log(message);  }		}
+	
+	
+	
+	
 	
 	
 	
@@ -85,13 +98,4 @@
 	var submitBuscadorProductos = document.getElementById("submitBuscadorProductos");
 	submitBuscadorProductos.style.width = anchopantalla * 0.9*0.1-4+"px";
 	submitBuscadorProductos.style.height = anchopantalla * 0.9*0.08+"px";
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	displayPasillos();
+	init();

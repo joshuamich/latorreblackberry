@@ -42,9 +42,10 @@
 	
 	
 	//FUNCTIONS						-----------------------------------------------------------
-	function showNuevaLista() {
-		var myfileurl = "nuevalista.html";
-		$('body').load(myfileurl, function() {});
+	function showInternaLista() {
+		var myfileurl = "internaLista.html";
+		$('body').load(myfileurl, function() {
+			});
 	}
 	
 	function insertLista() {
@@ -54,7 +55,7 @@
 						mynamespace.db.transaction(
 							function (t) {
 								var i;
-								var nombre_lista	=	document.getElementById('nombrelista').value;
+								nombre_lista	=	document.getElementById('nombrelista').value;
 								var insert_query	=	"INSERT INTO listas (id,users_id,nombre,updated) VALUES (null,'"+users_id+"','"+nombre_lista+"',datetime('now'));";
 								
 								t.executeSql(
@@ -66,8 +67,7 @@
 									}
 								);
 								
-								var myfileurl = "nuevalista.html";
-							    $('body').load(myfileurl, function() {});
+								showInternaLista();
 							}
 						);
 				}
@@ -78,11 +78,21 @@
 			location.href="index.html";
 	}
 	
-	
 	function log(message){	/*	alert('CONSOLE.LOG: ' + message);*/	if(typeof console == "object"){		console.log(message);  }		}
 	
 	
 	
+	$(document).ready(function() {
+		$(".caja").focus(function() {
+			if (this.value == this.defaultValue) {
+				this.value = "";
+			}
+		}).blur(function() {
+			if (!this.value.length) {
+				this.value = this.defaultValue;
+			}
+		});
+	});
 	
 	
 	
@@ -98,3 +108,4 @@
 	var crearListaForm = document.getElementById("crearListaForm");
 	crearListaForm.style.height = anchopantalla*0.4 + "px";
 	var users_id=1;
+	var nombre_lista="";

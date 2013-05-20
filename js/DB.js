@@ -57,7 +57,7 @@
 										tx.executeSql("INSERT INTO pasillos(id , nombre, updated) VALUES ('5','Comida Organica','2013-05-16');");
 										tx.executeSql("INSERT INTO pasillos(id , nombre, updated) VALUES ('6','Aperitivos','2013-05-16');");
 										
-										tx.executeSql("INSERT INTO productos(id,pasillos_id,nombre,descripcion,updated) VALUES ('1','1','juego naranja','litro jugo','2013-05-16');");
+										tx.executeSql("INSERT INTO productos(id,pasillos_id,nombre,descripcion,updated) VALUES ('1','1','jugo de naranja','litro jugo','2013-05-16');");
 										tx.executeSql("INSERT INTO productos(id,pasillos_id,nombre,descripcion,updated) VALUES ('2','1','agua pura','litro agua pura','2013-05-16');");
 										tx.executeSql("INSERT INTO productos(id,pasillos_id,nombre,descripcion,updated) VALUES ('3','2','pollo','libra de pollo','2013-05-16');");
 										tx.executeSql("INSERT INTO productos(id,pasillos_id,nombre,descripcion,updated) VALUES ('4','2','carne molida','libra carne molida','2013-05-16');");

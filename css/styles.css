@@ -558,22 +558,51 @@ td#agregarMiListaC ul {
 }
 
 td#agregarMiListaC ul li {
-    border-bottom: 1px solid #dfdddc;
-    background: url('../images/bgflechitapasillo.png') no-repeat;
-    background-position: 97% 50%;
+	border-bottom: 1px solid #dfdddc;
+	background: url('../images/bgflechitapasillo.png') no-repeat;
+	background-position: 97% 50%;
+	height: 50px;
+	position: relative;
 }
 
-td#agregarMiListaC ul li  a {
-    padding: 2.5%;
-    display: block;
-    height: 100%;
-    color: #000000;
-    text-decoration: none;
+ul#listado_pasillos li  a {
+	display: block;
+	height: 50%;
+	color: #000000;
+	text-decoration: none;
+	border: 2px solid transparent;
+	background-position: 10% 50%;
+	padding: 2.5% 5% 2.5% 3%;
+}
+
+td#agregarMiListaC ul li  a.item_nombre {
+	 display: block;
+	height: 100%;
+	color: #000000;
+	text-decoration: none;
+	border: 2px solid transparent;
+	background-position: 10% 50%;
+	padding: 2.5% 5% 2.5% 13%;
+}
+
+td#agregarMiListaC ul li a.checkitem {
+	top: 18%;
+	width: 5%;
+	display: block;
+	position: absolute;
+}
+
+td#agregarMiListaC ul li a.checkitem  img ,td#agregarMiListaC ul li a.borraritem  img {
+    border-radius: 7px;
     border: 2px solid transparent;
+	
 }
 
-td.milistallena ul li a {
-    background: url("../images/selectbg.png") no-repeat;
-    background-position: 10% 50%;
-    padding: 2.5% 5%;
+td#agregarMiListaC ul li a.borraritem {
+	left: 5%;
+	top: 18%;
+	width: 5%;
+	display: block;
+	position: absolute;
 }
+

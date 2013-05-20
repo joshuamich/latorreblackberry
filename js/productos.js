@@ -37,7 +37,7 @@
 	
 	
 	//FUNCIONES GENERALES			----------------------------------------------------------------------
-	function displayPasillos(){
+	function displayProductos(){
 			try{
 			mynamespace.db = window.openDatabase('DB_latorre_v1', '', 'DBLaTorrev1', 20 * 1024 * 1024, errorOnDB);
 			if(mynamespace.db){
@@ -69,7 +69,20 @@
 			$('body').load(myfileurl, function() {});
 	}
 	
+	function init(){
+			blackberry.system.event.onHardwareKey(blackberry.system.event.KEY_BACK,function() {   
+					var myfileurl="pasillos.html";	
+					$('body').load(myfileurl, function() {
+					});
+			});
+			displayProductos();
+	}
+	
 	function log(message){	/*	alert('CONSOLE.LOG: ' + message);*/	if(typeof console == "object"){		console.log(message);  }		}
+	
+	
+	
+	
 	
 	
 	
@@ -90,8 +103,8 @@
 	
 	
 	
+	init();
 	
 	
 	
 	
-	displayPasillos();
