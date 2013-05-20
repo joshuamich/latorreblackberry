@@ -1,6 +1,4 @@
-/*
- *                           App Blackberry La Torre
- */
+
 /****************************Navigation Functions****************************/
 function highlight(e) {
     e.style.border = "2px solid #2175f7";

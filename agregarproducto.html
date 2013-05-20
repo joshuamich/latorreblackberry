@@ -8,21 +8,27 @@
     <body>
         <table id="container">
             <tr>
-                <td id="logoC">
-                    <a x-blackberry-focusable="true" onmouseover="highlight(this);" onmouseout="unhighlight(this);" id="logo">
-                        <img src="images/latorrelogo.png"/>
+                <td id="logoC" valign="middle">
+                    <a  id="nombre_producto">
+                       Cerveza
                     </a>
                 </td>
             </tr>
             <tr>
-                <td>
-                    <form id="buscadorMapa">
-                        <input type="text" value="Buscar una tienda" class="caja"/>
-                        <input type="submit" value=""/>
+                <td id="containerContactenos">
+                    <form id="formproducto">
+                        <input type="text" 	   id="nombreform" name="nombre" value="Producto"  class="caja"/>
+                        <textarea class="caja" id="descripcion">Agregar una descripción</textarea>
+                       	<p id="label_pasillo">Pasillo</p>
+                        <input type="text" name="pasillo" value="Pasillo" id="pasilloform"  class="caja" disabled/>
+                        <div id="" style="position: relative; margin-top:20px;">
+                                <input type="text" name="cantidad_productos" value="1"  id="cantidad_productos" disabled/>
+                                <img x-blackberry-focusable="true" onmouseover="highlightBotonTitulo(this);" onmouseout="unhighlightBotonTitulo(this);" onClick="subCantidad();"  src="images/buttonmenos.png" style="position:absolute; left:0; z-index:2; width:20%;"/>
+                                <img x-blackberry-focusable="true" onmouseover="highlightBotonTitulo(this);" onmouseout="unhighlightBotonTitulo(this);" onClick="addCantidad();"  src="images/buttonmas.png" style="position:absolute; right:0; z-index:2;  width:20%;"/>
+                         </div>
+                        <input type="button" id="submitbutton" value="" x-blackberry-focusable="true" onmouseover="highlight(this);" onmouseout="unhighlight(this);" onClick="agregarProducto();"/>
                     </form>
-                    <div id="mapa">
-
-                    </div>
+                    <div id="direccionContactenos"></div>
                 </td>
             </tr>
             <tr>
@@ -39,8 +45,7 @@
             </tr>
         </table>
         <script src="js/jquery.js" type="text/javascript"></script>
-        <script src="js/actions.js" type="text/javascript"></script>
-        <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBxn0PC1MHWRzGTqhWGUCKIRrF0SI4yftk&sensor=true"></script>
-        <script src="js/tiendas.js" type="text/javascript"></script>
+        <!--<script src="js/actions.js" type="text/javascript"></script>-->
+        <script src="js/agregarproducto.js" type="text/javascript"></script>
     </body>
 </html>

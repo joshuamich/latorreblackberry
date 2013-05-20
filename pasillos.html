@@ -1,11 +1,4 @@
-<!DOCTYPE html>
-<html>
-    <head>
-        <title>La Torre</title>
-        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <link type="text/css" rel="stylesheet" href="styles.css" />
-    </head>
-    <body>
+
         <table id="container">
             <tr>
                 <td id="nombreLista">
@@ -13,21 +6,16 @@
                 </td>
             </tr>
             <tr>
-                <td id="nuevalistaC">
-                    <div id="sinelementos">
-                        <p>
-                            Sólo tienes que pulsar el <br/>
-                            botón "+" de abajo para agregar<br/>
-                            elementos a su lista.
-                        </p>    
-                    </div>
-                    <div id="conElementos">
-                    </div>
-                    <div id="crearMenuLista">
-                        <img src="images/agregaritemlista.png" width="11%" onmouseover="highlight(this);" onmouseout="unhighlight(this);" id="agregarItem"/>
-                        <img src="images/vertodos.png" width="25%" onmouseover="highlight(this);" onmouseout="unhighlight(this);" id="vertodos"/>
-                        <img src="images/verpendientes.png" width="25%" onmouseover="highlight(this);" onmouseout="unhighlight(this);" id="verpendientes"/>  
-                    </div>
+                <td id="agregarMiListaC">
+                    <form id="buscadorproductosForm">
+                        <input type="text" value="Buscar" class="caja" x-blackberry-focusable="true" onmouseover="highlightForm(this);" onmouseout="unhighlightForm(this);" id="productoNombre"/>
+                        <input type="button" x-blackberry-focusable="true" onmouseover="highlightForm(this);" onmouseout="unhighlightForm(this);" id="submitBuscadorProductos" value="" onclick="buscarPasillo();"/>
+                    </form>
+                    <h2>Pasillos</h2>
+                    <ul id="listado_pasillos">
+                       <!-- <li><a href="#" x-blackberry-focusable="true" onmouseover="highlight(this);" onmouseout="unhighlight(this);" onclick="showPasillo(1);">Carne</a></li>-->
+                       
+                    </ul>
                 </td>
             </tr>
             <tr>
@@ -44,7 +32,4 @@
             </tr>
         </table>
         <script src="js/jquery.js" type="text/javascript"></script>
-        <script src="js/actions.js" type="text/javascript"></script>
-        <script src="js/nuevalista.js" type="text/javascript"></script>
-    </body>
-</html>
+        <script src="js/pasillos.js" type="text/javascript"></script>

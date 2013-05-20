@@ -1,6 +1,4 @@
-/* 
- * Javascript para la sección de agregar producto a la lista
- */
+
 
 var buscadorproductosForm = document.getElementById("buscadorproductosForm");
 buscadorproductosForm.style.height = anchopantalla * 0.9 * 0.08 + "px";

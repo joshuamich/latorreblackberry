@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
-<widget xmlns="http://www.w3.org/ns/widgets" xmlns:rim="http://www.blackberry.com/ns/widgets" version="2.0.0.0" id="sampleapp"> 
+<widget xmlns="http://www.w3.org/ns/widgets" xmlns:rim="http://www.blackberry.com/ns/widgets" version="2.0.0.0" id="latorrev1.0"> 
     <author href="http://www.masdigital.me/"
             rim:copyright="Copyright 1998-2013 MAS">Copyright 1998-2013 MAS
     </author>
-    <name>La Torre</name>
+    <name>La Torrev1.0</name>
     <description>
         La Torre
     </description>
@@ -11,10 +11,28 @@
     <rim:navigation mode="focus" />
     <rim:loadingScreen backgroundcolor="#550e71" 
                        onLocalPageLoad="true"
-                       backgroundImage="images/splash.jpg" 
+                       backgroundImage="images/backgroundpurp.png" 
+					   foregroundImage="images/splash.png"
                        onFirstLaunch="true">
         <rim:transitionEffect type="zoomIn"/>
     </rim:loadingScreen>
+	
+	 <content src="index.html" ></content>
+	 <feature id="blackberry.system" />
+    <feature id="blackberry.ui.dialog" />
+    <feature id="blackberry.invoke" />
+    <feature id="blackberry.invoke.BrowserArguments" />
+    <feature id="blackberry.identity" />
+    <feature id="blackberry.system.event" />
+    <feature id="blackberry.invoke.CameraArguments" />
+    <feature id="blackberry.ui.menu" />
+	<icon src="images/icon.png"/>
+    <icon src="images/icon.png" rim:hover="true"/>
+ 
+    <rim:cache maxCacheSizeTotal="2048" maxCacheSizeItem ="256" />
+	<access subdomains="true" uri="http://innotechsa.com"/>
+ 
+   
     <license>
         Example license
         Copyright (c) 2012 INNOVATIVE TECHNOLOGIES S.A. .

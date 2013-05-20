@@ -40,14 +40,23 @@ td  {
 #logoC {
     width: 100%;
     height: 48px;
-    background: url('images/bgheader.jpg') repeat-x; 
+    background: url('../images/bgheader.jpg') repeat-x; 
 }
 
-a#logo {
+a#logo,#nombre_producto {
     display: block;
     border: 2px solid transparent;
     height: 44px;
     text-align: center;
+}
+#label_pasillo{
+	color:#a1a1a1;
+	margin:0 !important;
+}
+
+#nombre_producto{
+	
+	color:#FFFFFF;
 }
 
 #bannerC img{
@@ -91,7 +100,7 @@ ul#listas_creadas li a.verlista {
     height: 100%;
     margin: 0 1.1%;
     border-radius: 5px;
-    background: url('images/bgitemlista.png') no-repeat;
+    background: url('../images/bgitemlista.png') no-repeat;
     background-size: 100%;
 }
 
@@ -218,7 +227,7 @@ form#calculadora input[type="text"]{
     border: none;
     text-align: right;
     font-size: x-large;
-    background: url("images/bg_result_calculadora.png") no-repeat center;
+    background: url("../images/bg_result_calculadora.png") no-repeat center;
     background-size: 100%;
 }
 
@@ -231,19 +240,19 @@ form#calculadora button {
     font-size: x-large;
     border: 2px solid transparent;
     border-radius: 10px;
-    background: url('images/bg_button_calculadora.png') no-repeat;
+    background: url('../images/bg_button_calculadora.png') no-repeat;
     background-size: 100%;
     height: 21.45%;
 }
 
 button#igual {
     width: 32.6% !important;
-    background: url('images/bg_button_igual.png') no-repeat !important;
+    background: url('../images/bg_button_igual.png') no-repeat  !important;
     background-size: 100%;
 }
 
 button#borrar {
-    background: url('images/bg_borrar_calculadora.png') no-repeat !important;
+    background: url('../images/bg_borrar_calculadora.png') no-repeat  !important;
     background-size: 100%;
 }
 
@@ -251,43 +260,64 @@ td#containerContactenos {
     background: #e5e7eb;
 }
 
-form#formcontactenos {
+form#formcontactenos,form#formproducto {
     width: 90%;
     margin: 2% 5% 0.5% 5%;
 }
 
-form#formcontactenos input[type="text"] {
+form#formcontactenos input[type="text"],form#formproducto input[type="text"] {
     width: 98%;
     padding: 0 1%;
     border: none;
     margin: 5px 0 0 0;
     outline: none;
-    background: url('images/bginputcontacto.png') no-repeat center;
+    background: url('../images/bginputcontacto.png') no-repeat center;
     background-size: 100%;
     font-size: small;
     color: #a7a7a7;
 }
 
-form#formcontactenos textarea { 
+form#formcontactenos textarea,form#formproducto textarea { 
     width: 98%;
     padding: 1%;
     border: 0;
     margin: 4px 0 0 0;
-    background: url('images/bgtextareacontacto.png') no-repeat top center;
+    background: url('../images/bgtextareacontacto.png') no-repeat top center;
     background-size: 100%;
     font-size: small;
     outline: none;
     color: #a7a7a7;
 }
 
-form#formcontactenos input[type="submit"]{
+form#formproducto #cantidad_productos { 
+	width: 85%;
+	margin:3% 5% !important;
+	border: 0;
+	margin: 0 5%;
+	background: url('../images/backgroundcantidad.png') no-repeat top center;
+	background-size: 100%;
+	font-size: small;
+	outline: none;
+	color: #a7a7a7;
+	height: 76px;
+	text-align:center;
+	font-size:30px;
+	color:#000000;
+}
+
+form#formcontactenos input[type="submit"],form#formproducto input[type="button"]{
     border: none;
     width: 100%;
     display: block;
-    background: url('images/submitbg.png') top center no-repeat;
+    background: url('../images/submitbg.png') top center no-repeat;
     background-size: 100%;
     font-size: small;
     color: #ffffff;
+}
+form#formproducto input[type="button"]{
+	margin-top:20px;
+	min-height:50px;
+	background: url('../images/agregar-Producto.png') top center no-repeat !important;
 }
 
 div#direccionContactenos {
@@ -363,7 +393,7 @@ img#facebookboton {
 form#buscadorMapa {
     width: 90%;
     margin: 0 5%;
-    background: url('images/bgbuscador.png') no-repeat top center;
+    background: url('../images/bgbuscador.png') no-repeat top center;
     background-size: 100%;
     overflow: hidden;
 }
@@ -385,7 +415,7 @@ form#buscadorMapa input{
 
 form#buscadorMapa input[type="submit"] {
     width: 10%;
-    background: url('images/bgbotonbuscador.png') no-repeat center;
+    background: url('../images/bgbotonbuscador.png') no-repeat center;
     background-size: 77%;
 }
 
@@ -411,7 +441,7 @@ div#sinelementos p {
 div#crearMenuLista {
     position: relative;
     width: 100%;
-    background: url('images/bgmenuCrearLista.png') no-repeat;
+    background: url('../images/bgmenuCrearLista.png') no-repeat;
 }
 
 div#crearMenuLista img {
@@ -445,7 +475,7 @@ form#crearListaForm {
 }
 
 form#crearListaForm input[type="text"],
-form#crearListaForm input[type="submit"]{
+form#crearListaForm input[type="button"]{
     display: block;
     border: 2px solid #cdcdcd;
     border-radius: 8px;
@@ -455,7 +485,7 @@ form#crearListaForm input[type="submit"]{
     font-size: small;
 }
 
-form#crearListaForm input[type="submit"] {
+form#crearListaForm input[type="button"] {
     background: #9a9999;
     margin: 4px 0 0 0 !important;
     background: -webkit-linear-gradient(#c0c0c0 100%, #9a9999);
@@ -508,7 +538,7 @@ form#buscadorproductosForm input[type="submit"]{
     margin: 0;
     border-top-right-radius: 9px;
     border-bottom-right-radius: 9px;
-    background: url('images/searchsubmitbutton.png') no-repeat center #fbf9f7;
+    background: url('../images/searchsubmitbutton.png') no-repeat center #fbf9f7;
     background-size: 80%;
 }
 
@@ -529,7 +559,7 @@ td#agregarMiListaC ul {
 
 td#agregarMiListaC ul li {
     border-bottom: 1px solid #dfdddc;
-    background: url('images/bgflechitapasillo.png') no-repeat;
+    background: url('../images/bgflechitapasillo.png') no-repeat;
     background-position: 97% 50%;
 }
 
@@ -543,7 +573,7 @@ td#agregarMiListaC ul li  a {
 }
 
 td.milistallena ul li a {
-    background: url("images/selectbg.png") no-repeat;
+    background: url("../images/selectbg.png") no-repeat;
     background-position: 10% 50%;
     padding: 2.5% 5%;
 }

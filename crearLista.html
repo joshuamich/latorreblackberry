@@ -3,7 +3,7 @@
     <head>
         <title>La Torre</title>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <link type="text/css" rel="stylesheet" href="styles.css" />
+        <link type="text/css" rel="stylesheet" href="css/styles.css" />
     </head>
     <body>
         <table id="container">
@@ -18,7 +18,7 @@
                 <td id="crearListaC">
                     <form id="crearListaForm">
                         <input type="text" id="nombrelista" x-blackberry-focusable="true" onmouseover="highlightForm(this);" onmouseout="unhighlightForm(this);" class="caja" value="Nombre"/>
-                        <input type="submit" id="crearListaButton" value="Crear" x-blackberry-focusable="true" onmouseover="highlightForm(this);" onmouseout="unhighlightForm(this);" onclick="showNuevaLista();"/>        
+                        <input type="button" id="crearListaButton" value="Crear" x-blackberry-focusable="true" onmouseover="highlightForm(this);" onmouseout="unhighlightForm(this);" onclick="insertLista();"/>        
                     </form>
                 </td>
             </tr>
@@ -36,7 +36,6 @@
             </tr>
         </table>
         <script src="js/jquery.js" type="text/javascript"></script>
-        <script src="js/actions.js" type="text/javascript"></script>
         <script src="js/crearLista.js" type="text/javascript"></script>
     </body>
 </html>
