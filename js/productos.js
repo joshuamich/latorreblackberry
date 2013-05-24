@@ -57,7 +57,32 @@
 					);
 			}
 			}catch(err){	log(err.message );	}
-	}		
+	}	
+	
+	function buscarProducto(){
+		try{
+			var nombre_producto= document.getElementById('productoNombre').value;
+			mynamespace.db = window.openDatabase('DB_latorre_v1', '', 'DBLaTorrev1', 20 * 1024 * 1024, errorOnDB);
+			if(mynamespace.db){
+					mynamespace.db.readTransaction(
+						function (t) {
+							t.executeSql("SELECT * FROM productos WHERE pasillos_id = "+pasillos_id+" AND  lower(nombre) like '%"+nombre_producto.toLowerCase()+"%' ORDER BY nombre ASC", [], 
+								function (tx, results) {
+								var lista_html="";
+								for (var i = results.rows.length; i--;) {
+											lista_html += '<li><a href="#" x-blackberry-focusable="true" onmouseover="highlight(this);" onmouseout="unhighlight(this);" onclick="addProducto('+results.rows.item(i).id+');">'+results.rows.item(i).nombre+'</a></li>';
+											
+								}
+								document.getElementById('listado_pasillos').innerHTML = lista_html;
+								}
+							);
+						}
+					);
+			}
+			}catch(err){	log(err.message );	}
+		
+		return false;
+	}	
 	
 	function errorOnDB(){
 			location.href="index.html";

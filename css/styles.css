@@ -413,7 +413,7 @@ form#buscadorMapa input{
 }
 
 
-form#buscadorMapa input[type="submit"] {
+form#buscadorMapa input[type="button"] {
     width: 10%;
     background: url('../images/bgbotonbuscador.png') no-repeat center;
     background-size: 77%;
@@ -532,7 +532,7 @@ form#buscadorproductosForm input[type="text"]{
     color: #464646;
 }
 
-form#buscadorproductosForm input[type="submit"]{
+form#buscadorproductosForm input[type="button"]{
     padding: 0;
     border: 2px solid #cdcdcd;
     margin: 0;

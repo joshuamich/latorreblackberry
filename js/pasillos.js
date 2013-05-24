@@ -69,6 +69,33 @@
 			$('body').load(myfileurl, function() {});
 	}
 	
+	function buscarPasillo(){
+		try{
+			var nombre_pasillo= document.getElementById('productoNombre').value;
+	
+				mynamespace.db = window.openDatabase('DB_latorre_v1', '', 'DBLaTorrev1', 20 * 1024 * 1024, errorOnDB);
+				if(mynamespace.db){
+						mynamespace.db.readTransaction(
+							function (t) {
+								t.executeSql("SELECT * FROM pasillos WHERE lower(nombre) like '%"+nombre_pasillo.toLowerCase()+"%' ORDER BY nombre ASC", [], 
+									function (tx, results) {
+									var lista_html="";
+									for (var i = results.rows.length; i--;) {
+												lista_html += '<li><a href="#" x-blackberry-focusable="true" onmouseover="highlight(this);" onmouseout="unhighlight(this);" onclick="showProductos('+results.rows.item(i).id+');">'+results.rows.item(i).nombre+'</a></li>';
+												
+									}
+									document.getElementById('listado_pasillos').innerHTML = lista_html;
+									}
+								);
+							}
+						);
+				
+			}
+			}catch(err){	log(err.message );	}
+		
+		return false;
+	}
+	
 	function init(){
 			blackberry.system.event.onHardwareKey(blackberry.system.event.KEY_BACK,function() {   
 						var myfileurl="internaLista.html";	

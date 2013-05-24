@@ -7,9 +7,9 @@
             </tr>
             <tr>
                 <td id="agregarMiListaC">
-                    <form id="buscadorproductosForm">
+                    <form id="buscadorproductosForm" onsubmit="return buscarProducto();">
                         <input type="text" value="Buscar" class="caja" x-blackberry-focusable="true" onmouseover="highlightForm(this);" onmouseout="unhighlightForm(this);" id="productoNombre"/>
-                        <input type="button" x-blackberry-focusable="true" onmouseover="highlightForm(this);" onmouseout="unhighlightForm(this);" id="submitBuscadorProductos" value="" onclick="buscarPasillo();"/>
+                        <input type="button" x-blackberry-focusable="true" onmouseover="highlightForm(this);" onmouseout="unhighlightForm(this);" id="submitBuscadorProductos" value="" onclick="buscarProducto();"/>
                     </form>
                     <h2>Productos</h2>
                     <ul id="listado_pasillos">
@@ -32,4 +32,5 @@
             </tr>
         </table>
         <script src="js/jquery.js" type="text/javascript"></script>
+        <script src="js/actions.js" type="text/javascript"></script>
         <script src="js/productos.js" type="text/javascript"></script>

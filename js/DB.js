@@ -50,7 +50,7 @@
 										function (tx, err) {	log("ERROR - Table creation failed - code: " + err.code + ", message: " + err.message);	}
 										);
 										
-										tx.executeSql("INSERT INTO pasillos(id , nombre, updated) VALUES ('1','Bebidas','2013-05-16');");
+									/*	tx.executeSql("INSERT INTO pasillos(id , nombre, updated) VALUES ('1','Bebidas','2013-05-16');");
 										tx.executeSql("INSERT INTO pasillos(id , nombre, updated) VALUES ('2','Carnes','2013-05-16');");
 										tx.executeSql("INSERT INTO pasillos(id , nombre, updated) VALUES ('3','Alcohol','2013-05-16');");
 										tx.executeSql("INSERT INTO pasillos(id , nombre, updated) VALUES ('4','Mariscos','2013-05-16');");
@@ -61,7 +61,7 @@
 										tx.executeSql("INSERT INTO productos(id,pasillos_id,nombre,descripcion,updated) VALUES ('2','1','agua pura','litro agua pura','2013-05-16');");
 										tx.executeSql("INSERT INTO productos(id,pasillos_id,nombre,descripcion,updated) VALUES ('3','2','pollo','libra de pollo','2013-05-16');");
 										tx.executeSql("INSERT INTO productos(id,pasillos_id,nombre,descripcion,updated) VALUES ('4','2','carne molida','libra carne molida','2013-05-16');");
-										tx.executeSql("INSERT INTO productos(id,pasillos_id,nombre,descripcion,updated) VALUES ('5','3','cerveza','6pack cervezas','2013-05-16');");
+										tx.executeSql("INSERT INTO productos(id,pasillos_id,nombre,descripcion,updated) VALUES ('5','3','cerveza','6pack cervezas','2013-05-16');");*/
 										
 									}
 							);

@@ -26,6 +26,7 @@
 	
 	//FUNCIONES		----------------------------------------------
 	function addProducto(){
+		$('body').attr('opt',0);
 		var myfileurl = "pasillos.html";
 		$('body').load(myfileurl, function() {});
 	}

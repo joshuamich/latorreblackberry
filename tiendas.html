@@ -1,11 +1,4 @@
-<!DOCTYPE html>
-<html>
-    <head>
-        <title>La Torre</title>
-        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <link type="text/css" rel="stylesheet" href="css/styles.css" />
-    </head>
-    <body>
+
         <table id="container">
             <tr>
                 <td id="logoC">
@@ -16,12 +9,12 @@
             </tr>
             <tr>
                 <td>
-                    <form id="buscadorMapa">
-                        <input type="text" value="Buscar una tienda" class="caja"/>
-                        <input type="submit" value=""/>
+                    <form id="buscadorMapa" onsubmit="return buscarTienda();">
+                        <input type="text" value="Buscar una tienda" class="caja" id="texto_buscador"/>
+                        <input x-blackberry-focusable="true" onmouseover="highlight(this);" onmouseout="unhighlight(this);" type="button" value="" onclick="buscarTienda();"/>
                     </form>
                     <div id="mapa">
-
+							
                     </div>
                 </td>
             </tr>
@@ -40,7 +33,4 @@
         </table>
         <script src="js/jquery.js" type="text/javascript"></script>
         <script src="js/actions.js" type="text/javascript"></script>
-        <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBxn0PC1MHWRzGTqhWGUCKIRrF0SI4yftk&sensor=true"></script>
         <script src="js/tiendas.js" type="text/javascript"></script>
-    </body>
-</html>

@@ -1,12 +1,4 @@
-<!DOCTYPE html>
-<html>
-    <head>
-        <title>La Torre</title>
-        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <link type="text/css" rel="stylesheet" href="css/styles.css" />
-    </head>
-    <body>
-        <table id="container">
+		<table id="container">
             <tr>
                 <td id="logoC">
                     <a x-blackberry-focusable="true" onmouseover="highlight(this);" onmouseout="unhighlight(this);" onclick="showHome();" id="logo">
@@ -16,7 +8,7 @@
             </tr>
             <tr>
                 <td id="containerContactenos">
-                    <form id="formcontactenos">
+                    <form id="formcontactenos" onSubmit="return enviarFormulario();">
                         <input type="text" name="nombre" value="Nombre" id="nombreform" class="caja"/>
                         <input type="text" name="email" value="E-mail" id="emailform"  class="caja"/>
                         <textarea class="caja" id="mensajeform">Agregar Mensaje</textarea>
@@ -41,5 +33,3 @@
         <script src="js/jquery.js" type="text/javascript"></script>
         <script src="js/actions.js" type="text/javascript"></script>
         <script src="js/contactenos.js" type="text/javascript"></script>
-    </body>
-</html>

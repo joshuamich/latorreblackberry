@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<widget xmlns="http://www.w3.org/ns/widgets" xmlns:rim="http://www.blackberry.com/ns/widgets" version="2.0.0.0" id="latorrev1.0"> 
+<widget xmlns="http://www.w3.org/ns/widgets" xmlns:rim="http://www.blackberry.com/ns/widgets" version="2.0.0.0" id="latorrev10"> 
     <author href="http://www.masdigital.me/"
             rim:copyright="Copyright 1998-2013 MAS">Copyright 1998-2013 MAS
     </author>
@@ -31,14 +31,18 @@
  
     <rim:cache maxCacheSizeTotal="2048" maxCacheSizeItem ="256" />
 	<access subdomains="true" uri="http://innotechsa.com"/>
- 
+	<access subdomains="true" uri="http://gstatic.com"/>
+    <access subdomains="true" uri="http://googleapis.com"/>
+	<access subdomains="true" uri="http://google.com"/>
+	<access subdomains="true" uri="http://facebook.com"/>
+	<access subdomains="true" uri="http://static.ak.facebook.com"/>
    
     <license>
         Example license
         Copyright (c) 2012 INNOVATIVE TECHNOLOGIES S.A. .
         THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND,
         EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF
-        MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND
+        MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND 
         NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS
         BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN
         ACTION OF CONTRACT, INSULT OR OTHERWISE, ARISING FROM, OUT OF OR IN
