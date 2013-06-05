@@ -23,7 +23,7 @@
 										);
 										
 										tx.executeSql(					
-										'CREATE TABLE IF NOT EXISTS listas (id INTEGER PRIMARY KEY AUTOINCREMENT,users_id int, nombre text, updated  DATETIME NOT NULL)',
+										'CREATE TABLE IF NOT EXISTS listas (id INTEGER PRIMARY KEY AUTOINCREMENT,users_id int, nombre text, updated  DATETIME NOT NULL,ri int DEFAULT \'0\')',
 										[],
 										function (tx, res) {	log("Table Created Successfully");	},
 										function (tx, err) {	log("ERROR - Table lista failed - code: " + err.code + ", message: " + err.message);	}
